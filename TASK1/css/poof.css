@@ -1,0 +1,56 @@
+html, body {
+    font-family: 'lucida grande', helvetica, arial, sans-serif;
+    line-height: 1.4em;
+    margin: 0; padding: 0;
+}
+h1 {
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    line-height: 42px;
+    margin: 0;
+    padding-left: 1em;
+}
+hr {
+    background: #ddd;
+    color: #ddd;
+    clear:both;
+    height: 1px;
+    border: none;
+    margin: 40px 0 20px 0;
+}
+img {border: none;}
+a {
+    color: #b02127;
+    text-decoration: none;
+}
+a:hover {text-decoration: underline;}
+.example {
+    padding: 20px;
+    width: 800px;
+}
+.deleteme {
+    background-color: #9cf;
+    border: 2px solid #36c;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 24px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    width: 80px;
+}
+.even {
+    background-color: #ff8998;
+    border-color:#d2412c;
+}
+.poof {
+    background: transparent url(../img/photos/poof.png) no-repeat 0 0;
+    cursor: pointer;
+    display: none;
+    height: 32px;
+    position: absolute;
+    width: 32px;
+}
+.clear {clear: both;}

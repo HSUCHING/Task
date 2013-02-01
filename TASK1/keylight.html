@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="The experiments and interactive playground of Hakim El Hattab." />
+    <meta name="keywords" content="hakim, elhattab, hakim el hattab, hakim elhattab, interactive, developer, flash, html5, canvas, web, experiments" />
+    <meta name="author" content="Hakim El Hattab" />
+
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <title>Keylight - an audio rhythm experiment built using HTML5.</title>
+
+    <style type="text/css"> html{color:#000;background:#222222;}a{cursor:pointer;}html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}q:before,q:after{content:'';}abbr,acronym {border:0;font-variant:normal;}sup {vertical-align:text-top;}sub {vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;outline-style:none;outline-width:0pt;}legend{color:#000;}a:focus,object,h1,h2,h3,h4,h5,h6{-moz-outline-style: none; border:0px;}strong {font-weight: bold;}@font-face { font-family: Delicious; font-weight: bold; src: url('../../../assets/fonts/Delicious-Bold.otf'); }body {overflow: hidden;font-family: Georgia, Helvetica, Arial, sans-serif;color: #333333;font-size: 11px;}a, a:hover {transition: all .08s linear;-o-transition: all .08s linear;-moz-transition: all .08s linear;-webkit-transition: all .08s linear;padding: 1px;}p.noCanvas {color: #999999;font-size: 24px;text-align: center;margin-top: 150px;}#panel {position: absolute; margin: 5px;padding: 5px;z-index: 99;background-color: #FFFECF;border: 1px solid #e1e0af;}#panel a {color: #333333;background-color: #FFFECF;text-decoration: underline;}#panel a:hover {color: #FFFECF;background-color: #333333;}#panel a.versionLink {padding: 1px;text-decoration: underline;}#panel a.versionLink.selected {color: #888888;text-decoration: none;}#panel p {padding: 0px 5px 5px 5px;line-height: 1.6em;}#panel h2 {font-size: 20px;font-weight: bold;font-family: Delicious, Helvetica, sans-serif;padding: 5px 5px 5px 5px;}#chromeBadge {position: absolute; bottom: 0; right: 0;padding: 4px;}#sharing {background-color: #FFFECF;position: absolute; top: 0;right: 0;margin: 5px;padding: 7px 0 4px 10px;z-index: 98;border: 1px solid #e1e0af;}#facebook_button {float: left;}#retweet_button {float: left;}#flattr_button {float: right;margin: 1px 10px 0 4px;}
+    </style>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="css/keylight.css" rel="stylesheet" media="screen" />
+    <script>
+        var flattr_url = 'http://hakim.se/experiments/html5/keylight/03/';
+        var flattr_btn='compact';
+    </script>
+
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+        (function(d, t) {
+            var g = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+        })(document, 'script');
+    </script>
+
+</head>
+<body>
+<div id="panel">
+    <h2><a href="../../../">Experiments</a> / Keylight  / 03</h2>
+    <p>Depending on where keys are placed, different tones will be played.<br/><b>Double click</b> to add new keys or press & hold to drag them around.<br/>Copy the <b>URL</b> to save your tune.<br/><b><a id="reset" href="#">Reset</a> - <a id="randomize" href="#">Randomize</a> - </b><b><a id="decreaseSpeed" href="#">Decrease</a> / <a id="increaseSpeed" href="#">Increase</a></b> speed (<span id="speedDisplay">3/6</span>)</p>
+</div>
+<div id="paused" class="message">Paused due to lack of input. Move your mouse or click to re-activate.</div><div id="intro" class="message">Double-click inside the room and create at least two keys to trigger sound.</div><audio id="chord1" src="http://hakim.se/experiments/html5/keylight/03/assets/1.mp3" preload="auto"></audio><audio id="chord2" src="http://hakim.se/experiments/html5/keylight/03/assets/2.mp3" preload="auto"></audio><audio id="chord3" src="http://hakim.se/experiments/html5/keylight/03/assets/3.mp3" preload="auto"></audio><audio id="chord4" src="http://hakim.se/experiments/html5/keylight/03/assets/4.mp3" preload="auto"></audio><audio id="chord5" src="http://hakim.se/experiments/html5/keylight/03/assets/5.mp3" preload="auto"></audio><audio id="chord6" src="http://hakim.se/experiments/html5/keylight/03/assets/6.mp3" preload="auto"></audio><audio id="chord7" src="http://hakim.se/experiments/html5/keylight/03/assets/7.mp3" preload="auto"></audio><audio id="chord8" src="http://hakim.se/experiments/html5/keylight/03/assets/8.mp3" preload="auto"></audio><audio id="chord9" src="http://hakim.se/experiments/html5/keylight/03/assets/9.mp3" preload="auto"></audio><audio id="chord10" src="http://hakim.se/experiments/html5/keylight/03/assets/10.mp3" preload="auto"></audio><audio id="chord11" src="http://hakim.se/experiments/html5/keylight/03/assets/11.mp3" preload="auto"></audio><audio id="chord12" src="http://hakim.se/experiments/html5/keylight/03/assets/12.mp3" preload="auto"></audio><audio id="chord13" src="http://hakim.se/experiments/html5/keylight/03/assets/13.mp3" preload="auto"></audio><audio id="chord14" src="http://hakim.se/experiments/html5/keylight/03/assets/14.mp3" preload="auto"></audio><audio id="chord15" src="http://hakim.se/experiments/html5/keylight/03/assets/15.mp3" preload="auto"></audio><audio id="chord16" src="http://hakim.se/experiments/html5/keylight/03/assets/16.mp3" preload="auto"></audio><audio id="chord17" src="http://hakim.se/experiments/html5/keylight/03/assets/17.mp3" preload="auto"></audio><audio id="chord18" src="http://hakim.se/experiments/html5/keylight/03/assets/18.mp3" preload="auto"></audio><audio id="chord19" src="http://hakim.se/experiments/html5/keylight/03/assets/19.mp3" preload="auto"></audio><audio id="chord20" src="http://hakim.se/experiments/html5/keylight/03/assets/20.mp3" preload="auto"></audio><audio id="chord21" src="http://hakim.se/experiments/html5/keylight/03/assets/21.mp3" preload="auto"></audio><audio id="chord22" src="http://hakim.se/experiments/html5/keylight/03/assets/22.mp3" preload="auto"></audio><audio id="chord23" src="http://hakim.se/experiments/html5/keylight/03/assets/23.mp3" preload="auto"></audio><audio id="chord24" src="http://hakim.se/experiments/html5/keylight/03/assets/24.mp3" preload="auto"></audio><audio id="chord25" src="http://hakim.se/experiments/html5/keylight/03/assets/25.mp3" preload="auto"></audio><audio id="chord26" src="http://hakim.se/experiments/html5/keylight/03/assets/26.mp3" preload="auto"></audio><audio id="chord27" src="http://hakim.se/experiments/html5/keylight/03/assets/27.mp3" preload="auto"></audio><audio id="chord28" src="http://hakim.se/experiments/html5/keylight/03/assets/28.mp3" preload="auto"></audio><audio id="chord29" src="http://hakim.se/experiments/html5/keylight/03/assets/29.mp3" preload="auto"></audio><audio id="chord30" src="http://hakim.se/experiments/html5/keylight/03/assets/30.mp3" preload="auto"></audio>
+<canvas id="world"><p class="noCanvas">You need a <a href="http://www.google.com/chrome">modern browser</a> to view this.</p></canvas>
+<div id="sharing">
+    <div id="flattr_button"><script src="http://api.flattr.com/button/load.js" type="text/javascript"></script></div>
+    <iframe id="facebook_button" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fhakim.se%2Fexperiments%2Fhtml5%2Fkeylight%2F03%2F&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+    <div id="retweet_button">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://hakim.se/experiments/html5/keylight/03/" data-text="Keylight - an audio rhythm experiment built in HTML5 by @hakimel." data-count="horizontal" data-related="hakimel">Tweet</a>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div>
+</div>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script><script src="js/keylight.js"></script>
+
+</body>
+</html>
